@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = mywebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        mywebView.loadUrl("http://aceautomotive.co.in/index.php/en/");
+        mywebView.loadUrl("<Your Website Link>");
         mywebView.setWebViewClient(new myWebClient(){
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
