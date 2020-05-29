@@ -1,25 +1,28 @@
 package in.co.aceautomotive;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.ImageView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
-    private static int Splash_time = 2500;
-
-
+    private static int splashTimeOut=3000;
+    private ImageView logo;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
+        logo = (ImageView)findViewById(R.id.logo);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent= new Intent( SplashActivity.this,MainActivity.class);
-                startActivity(intent);
+                Intent i = new Intent( SplashActivity.this, MainActivity.class);
+                startActivity(i);
+                finish();
             }
-        }, Splash_time);
+        },splashTimeOut);
     }
 }
