@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private WebView mywebView;
     SwipeRefreshLayout swipe;
     private Context context = this;
-    public String lastUrl="\"http://aceautomotive.co.in/index.php/en/\"";
+    public String lastUrl="<Your Website Link>";
 
 
     @Override
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                     LoadWeb(mywebView.getUrl());
             }
         });
-        LoadWeb("http://aceautomotive.co.in/index.php/en/");
+        LoadWeb("<Your Website Link>");
 
     }
 
@@ -81,8 +81,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed(){
         String url= mywebView.getUrl();
-        //"http://aceautomotive.co.in/index.php/en/"
-        if(mywebView.getUrl().equals("http://aceautomotive.co.in/index.php/en/")){
+        if(mywebView.getUrl().equals("<Your Website Link>")){
             super.onBackPressed();
         }
         else if (mywebView.canGoBack()) {
